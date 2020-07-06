@@ -1,0 +1,26 @@
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+
+public class Facebook {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver=new ChromeDriver();
+		driver.get("http//google.com");
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+			       .withTimeout(30, TimeUnit.SECONDS)
+			       .pollingEvery(5, TimeUnit.SECONDS)
+			       .ignoring(NoSuchElementException.class);
+		Boolean search= wait.until((driver1)->{System.out.println("hi");driver1.findElement(By.className("q")).isDisplayed();});
+		
+
+	}
+
+}

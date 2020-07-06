@@ -1,0 +1,13 @@
+package com.example.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.example.model.Student;
+
+@Service
+public interface StudentService {
+	public List<Student> getData();
+
+}

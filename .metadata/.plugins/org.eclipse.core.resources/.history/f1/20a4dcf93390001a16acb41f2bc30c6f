@@ -1,0 +1,12 @@
+import com.google.inject.Inject;
+
+public class TestRectangle {
+	
+	@Inject
+	Shape s;
+	
+	public void validate() {
+		s.area();
+	}
+
+}

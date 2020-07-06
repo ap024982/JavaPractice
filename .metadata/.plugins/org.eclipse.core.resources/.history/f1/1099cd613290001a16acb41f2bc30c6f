@@ -1,0 +1,10 @@
+
+public class TestRectangle {
+	
+	Shape s;
+	
+	public void validate() {
+		s.area();
+	}
+
+}

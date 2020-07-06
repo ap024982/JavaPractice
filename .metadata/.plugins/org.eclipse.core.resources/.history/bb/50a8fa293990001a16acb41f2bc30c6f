@@ -1,0 +1,22 @@
+import com.google.inject.Inject;
+
+public class TestRectangle {
+	
+	
+	@Inject
+	Shape s;
+	
+	/*@Inject
+	void setShape(Shape s1){
+		s=s1;
+	}*/
+	
+	
+	
+	public void validate() {
+		System.out.println(s.)
+		
+		s.area();
+	}
+
+}

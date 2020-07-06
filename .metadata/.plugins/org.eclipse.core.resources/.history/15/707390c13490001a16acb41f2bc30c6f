@@ -1,0 +1,18 @@
+
+public class Rectangle implements Shape {
+
+	int length;
+	int breadth;
+	
+	Rectangle(int x,int y){
+		length=x;
+		breadth=y;
+	}
+	
+	public void area() {
+		// TODO Auto-generated method stub
+		System.out.println("In Rectangle");
+		System.out.println(x*y);
+	}
+
+}

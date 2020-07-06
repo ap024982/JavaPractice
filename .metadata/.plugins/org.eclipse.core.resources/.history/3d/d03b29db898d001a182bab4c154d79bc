@@ -1,0 +1,22 @@
+package com.example.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.dao.StudentDaoImpl;
+import com.example.model.Student;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class StudentServiceImpl implements StudentService {
+	
+	
+	StudentDaoImpl stdImpl=new StudentDaoImpl();
+	
+	public List<Student> getData() {
+		stdImpl.addStudents();
+		List<Student> stdList= stdImpl.showStudents();
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.example.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.example.model.Student;
+
+public class StudentDaoImpl {
+	List<Student> std=new ArrayList<Student>();
+	
+	public void addStudents() {
+		std.add(new Student(10,"Atmadeep","Paul"));
+		std.add(new Student(20,"Dipali","Paul"));
+		std.add(new Student(30,"Usha","Kandala"));
+		
+	}
+
+}

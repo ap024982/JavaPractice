@@ -1,0 +1,37 @@
+package com.example.demo;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.model.Student;
+import com.example.services.StudentService;
+import com.example.services.StudentServiceImpl;
+
+@SpringBootApplication
+@ComponentScan({"com.example"})
+@RestController
+@RequestMapping("/api/v1")
+public class StudentsApplication {
+	
+	//StudentService std=new StudentServiceImpl();
+	@Autowired
+	StudentService std;
+	
+	@GetMapping("/allStudents")
+	public List<Student> getAllStudents(){
+		System.out.println("hi");
+		return std.getData();
+	}
+
+	public static void main(String[] args) {
+		SpringApplication.run(StudentsApplication.class, args);
+	}
+
+}
