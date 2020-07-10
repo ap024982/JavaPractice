@@ -1,3 +1,0 @@
-Connection="jdbc:mysql://localhost:3308/testapp";
-UserName="dev";
-Password="dev";
