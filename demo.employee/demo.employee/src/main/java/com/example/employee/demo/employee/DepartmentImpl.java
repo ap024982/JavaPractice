@@ -2,6 +2,7 @@ package com.example.employee.demo.employee;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -63,6 +64,36 @@ public class DepartmentImpl {
 		}
 		con.close();
 	return lst;
+		
+	}
+	
+	public void addDepartment(Department d) throws ClassNotFoundException, SQLException {
+		 
+		Class.forName("com.mysql.cj.jdbc.Driver"); 
+		//String instanceConnectionName = "avyukt";
+		String databaseName = "employee";
+		String IP_of_instance = "34.93.199.229";
+		String username = "root";
+		String password = "root";
+		String jdbcUrl = String.format("jdbc:mysql://%s/%s"+"?useSSL=false", 
+				IP_of_instance, databaseName);          
+		System.out.println(jdbcUrl);
+		Connection con = DriverManager.getConnection(jdbcUrl, username, password);
+		//Statement stmt=con.createStatement();  
+		Integer iDeptId=d.getId();
+		String sName=d.getName();
+		String sLoc=d.getLocation();
+		//String strQuery=String.format("select * from department where location='%s"+"'", loc);
+		String strQuery = "INSERT INTO department(ID,name,location) "
+	            + "VALUES(?,?,?)";
+
+	PreparedStatement pstmt = con.prepareStatement(strQuery,
+	                              Statement.RETURN_GENERATED_KEYS);
+	pstmt.setInt(1, iDeptId);
+	pstmt.setString(2,sName);
+	pstmt.setString(3, sLoc);
+	pstmt.executeUpdate();
+	//return lst;
 		
 	}
 
