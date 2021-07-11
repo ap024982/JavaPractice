@@ -5,6 +5,7 @@
     <classes>
       <class name="TestFacebook"/>
       <class name="TestGoogle"/>
+       <class name="TestWhatsapp"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
