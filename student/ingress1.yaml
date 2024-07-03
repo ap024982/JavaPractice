@@ -1,0 +1,41 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: web-ingress
+  namespace: default
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /api/students/{id}
+        pathType: Prefix
+        backend:
+          service:
+            name: atpservice
+            port:
+              number: 80
+      - path: /api/students
+        pathType: Prefix
+        backend:
+          service:
+            name: atpservice
+            port:
+              number: 80
+      - path: /api/students/put/{id}
+        pathType: Prefix
+        backend:
+          service:
+            name: atpservice
+            port:
+              number: 80
+      - path: /api/students/del/{id}
+        pathType: Prefix
+        backend:
+          service:
+            name: atpservice
+            port:
+              number: 80
+
+
