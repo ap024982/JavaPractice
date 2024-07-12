@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abfb8561-6124-4ca3-b504-d8eaad9bcd96" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CurrencyCoverter/CurrencyCoverter/src/main/java/com/example/CurrencyCoverter/controller/currencyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CurrencyCoverter/CurrencyCoverter/src/main/java/com/example/CurrencyCoverter/model/currencyConvert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CurrencyCoverter/CurrencyCoverter/src/main/java/com/example/CurrencyCoverter/service/currencyConvertValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configServer/configServer/src/main/java/com/example/configServer/ConfigServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/configServer/configServer/src/main/java/com/example/configServer/ConfigServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CurrencyConvertFeignClient/CurrencyConvertFeignClient/src/main/java/com/example/CurrencyConvertFeignClient/controller/FeignCurrencyConvert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CurrencyConvertFeignClient/CurrencyConvertFeignClient/src/main/java/com/example/CurrencyConvertFeignClient/model/CurrencyExchange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CurrencyConvertFeignClient/CurrencyConvertFeignClient/src/main/java/com/example/CurrencyConvertFeignClient/model/FeignCurrency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CurrencyConvertFeignClient/CurrencyConvertFeignClient/src/main/java/com/example/CurrencyConvertFeignClient/service/CurrencyConvertProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo-Spring" beforeDir="false" afterPath="$PROJECT_DIR$/demo-Spring" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo-Spring/demo" beforeDir="false" afterPath="$PROJECT_DIR$/demo-Spring/demo" afterDir="false" />
     </list>
@@ -17,9 +17,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2iypBzWd15LdLvH1ZLUSELtdrX8" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,7 +30,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/avyuk/Documents/JavaPractice"
+    "last_opened_file_path": "C:/Users/avyuk/Documents/JavaPractice/CurrencyConvertFeignClient/CurrencyConvertFeignClient/pom.xml"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
