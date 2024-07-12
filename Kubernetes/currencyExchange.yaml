@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: currencyexchangedeployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: currencyexchangeapp
+  template:
+    metadata:
+      labels:
+        app: currencyexchangeapp
+    spec:
+      containers:
+      - name: configcontainer
+        image: gcr.io/omega-booster-422417-n5/currency-exchange:1.0
+        ports:
+        - containerPort: 8080
+        resources:   # Define resource limits and requests here
+          limits:
+            cpu: "0.5"   # Limit CPU usage to 0.5 cores
+            memory: "512Mi"   # Limit memory usage to 512 MiB
+          requests:
+            cpu: "0.2"   # Request a minimum of 0.2 cores
+            memory: "256Mi"   # Request a minimum of 256 MiB
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: currency-exchange-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: currencyexchangeapp
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
