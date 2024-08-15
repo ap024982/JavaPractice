@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: currencyconvertdeployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: currencyconvertapp
+  template:
+    metadata:
+      labels:
+        app: currencyconvertapp
+    spec:
+      containers:
+      - name: currencyconvertcontainer
+        image: gcr.io/omega-booster-422417-n5/currency-converter:1.0
+        ports:
+        - containerPort: 8001
+        resources:   # Define resource limits and requests here
+          limits:
+            cpu: "0.3"   # Limit CPU usage to 0.5 cores
+            memory: "256Mi"   # Limit memory usage to 512 MiB
+          requests:
+            cpu: "0.1"   # Request a minimum of 0.2 cores
+            memory: "128Mi"   # Request a minimum of 256 MiB
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: currency-convert-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: currencyconvertapp
+  ports:
+  - protocol: TCP
+    port: 8001
+    targetPort: 8001

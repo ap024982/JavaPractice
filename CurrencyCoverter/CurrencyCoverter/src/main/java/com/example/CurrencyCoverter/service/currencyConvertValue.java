@@ -19,7 +19,7 @@ public class currencyConvertValue {
         HashMap<String,String> hs=new HashMap<String,String>();
         hs.put("from",from);
         hs.put("to",to);
-        ResponseEntity<currencyConvert> rs=new  RestTemplate().getForEntity("http://localhost:8080/findConversionRate/{from}/to/{to}",currencyConvert.class,hs);
+        ResponseEntity<currencyConvert> rs=new  RestTemplate().getForEntity("http://104.196.134.78:8080/findConversionRate/{from}/to/{to}",currencyConvert.class,hs);
         currencyConvert c= rs.getBody();
         float fVal=c.getRate()*quantity;
         return new currencyConvert(from,to,quantity,c.getRate(),fVal);

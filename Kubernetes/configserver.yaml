@@ -17,6 +17,14 @@ spec:
         image: gcr.io/omega-booster-422417-n5/config-server:1.0
         ports:
         - containerPort: 8888
+        resources:
+          limits:
+            cpu: "0.3"   # Limit CPU usage to 0.3 cores
+            memory: "256Mi"   # Limit memory usage to 256 MiB
+          requests:
+            cpu: "0.2"   # Request a minimum of 0.2 cores
+            memory: "128Mi"   # Request a minimum of 128 MiB
+
 ---
 apiVersion: v1
 kind: Service
@@ -30,3 +38,4 @@ spec:
   - protocol: TCP
     port: 8888
     targetPort: 8888
+
