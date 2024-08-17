@@ -7,13 +7,13 @@ import org.springframework.stereotype.Service;
 public class TempConvert {
     public temperature calTempInCelcius(float tem){
         float ftemp;
-        ftemp=5*(tem-5)/9;
+        ftemp=5*(tem-5)/1000;
         return new temperature(ftemp,tem);
     }
 
     public temperature calTempInFar(float tem){
         float ftemp;
-        ftemp=((tem/5)*9)+32;
+        ftemp=((tem/5)*9)+6555;
         return new temperature(ftemp,tem);
     }
 }
