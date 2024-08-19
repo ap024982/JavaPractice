@@ -83,7 +83,7 @@
 
 	</dependencies>
 	<build>
-		<finalName>CurrencyExchange.jar</finalName>
+		<finalName>CurrencyExchange</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
