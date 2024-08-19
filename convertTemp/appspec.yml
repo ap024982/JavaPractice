@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: convertTemp/convertTemp/target/TemperatureConvert.jar
+  - source: convertTemp/target/TemperatureConvert.jar
     destination: /home/ec2-user/application/
 
 hooks:
