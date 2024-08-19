@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: configServer/target/CurrencyExchange.jar
+  - source: currencyExchange/target/CurrencyExchange.jar
     destination: /home/ec2-user/application/
 
 hooks:
