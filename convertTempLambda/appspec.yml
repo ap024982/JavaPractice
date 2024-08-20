@@ -5,6 +5,8 @@ Resources:
       Properties:
         Name: TempConvertFunction
         Alias: live
+	CurrentVersion: "1"
+        TargetVersion: "2"
 Hooks:
   - BeforeAllowTraffic:
       - location: scripts/validate.sh
