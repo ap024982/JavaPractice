@@ -1,0 +1,16 @@
+version: 0.0
+Resources:
+  - myLambdaFunction:
+      Type: AWS::Lambda::Function
+      Properties:
+        Name: TempConvertFunction
+        Alias: live
+Hooks:
+  - BeforeAllowTraffic:
+      - location: scripts/validate.sh
+        timeout: 300
+        runas: root
+  - AfterAllowTraffic:
+      - location: scripts/post_deploy.sh
+        timeout: 300
+        runas: root
